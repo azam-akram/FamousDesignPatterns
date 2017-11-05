@@ -1,6 +1,6 @@
 public class LiveCoverageWebApp extends LiveCoverageApp implements LiveCoverageObserver {
 
-    private LiveCoverageService liveCoverageService = MatchUpdaterFactory.getUpdater(MatchType.FOOTBALL);
+    private LiveCoverageService liveCoverageService = MatchUpdaterFactory.getUpdater(MatchType.CRICKET);
 
     @Override
     public void update () {

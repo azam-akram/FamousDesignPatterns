@@ -9,7 +9,7 @@ public class FootballLiveCoverageServiceImpl implements LiveCoverageService {
 
     @Override
     public void register (LiveCoverageObserver sportLiveCoverageObserver) {
-        System.out.println("Registering " + sportLiveCoverageObserver.getClass().getName());
+        System.out.println("FootballLiveCoverageServiceImpl, registering " + sportLiveCoverageObserver.getClass().getName());
         observers.add(sportLiveCoverageObserver);
     }
 

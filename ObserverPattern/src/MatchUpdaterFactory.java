@@ -2,6 +2,8 @@ public class MatchUpdaterFactory {
 
     private static FootballLiveCoverageServiceImpl footballMatchUpdater;
 
+    private static CricketLiveCoverageServiceImpl cricketMatchUpdater;
+
     public static LiveCoverageService getUpdater(MatchType type) {
         switch (type) {
             case FOOTBALL:
@@ -12,6 +14,12 @@ public class MatchUpdaterFactory {
                 }
                 return footballMatchUpdater;
             case CRICKET:
+                if (cricketMatchUpdater == null) {
+                    synchronized (CricketLiveCoverageServiceImpl.class) {
+                        cricketMatchUpdater = new CricketLiveCoverageServiceImpl();
+                    }
+                }
+                return cricketMatchUpdater;
             case TENNIS:
             default:
                     return null;
