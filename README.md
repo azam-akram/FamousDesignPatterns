@@ -7,6 +7,8 @@ This repository contains sample java code for various commonly used design patte
 
 - Observer Pattern
 
+- Builder Pattern (for multiple parameters)
+
 - Visitor Pattern (coming soon)
 
 - Adapter Pattern (coming soon)
